@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css?family=Acme');
+
+:root {
+  --red: #BB133E;
+  --blue: #002664;
+  --gold: #f8b700;
+  --white: #fff;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  background-image: url('img/flag.png');
+}
+
+span {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.header {
+  background-color: var(--blue);
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3em;
+}
+
+.header p {
+  font-family: arial;
+  font-size: 1em;
+  color: var(--white);
+  padding-bottom: 4px;
+}
+
+.header h2 {
+  font-family: 'Acme', sans-serif;
+  font-size: 2em;
+  background-image: linear-gradient(to right, var(--red), var(--white), var(--red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255,255,255,.01);
+}
+
+.interface {
+  padding: 0;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-row-gap: 10vh;
+  justify-content: center;
+}
+
+.interface a {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.interface img {
+  width: 220px;
+  height: 220px;
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  transition: 0.5s;
+  box-shadow: 5px 10px 18px var(--white);
+}
+
+.interface div {
+  width: 25vw;
+  padding: 0 10px 0 20px;
+  background-color: var(--blue);
+  margin-left: 1em;
+  box-shadow: 5px 10px 18px var(--red);
+  transition: 0.5s;
+  margin-bottom: 1em;
+}
+
+.interface a:hover div {
+  transform: translateX(20px);
+}
+
+.interface a:hover img {
+  transform: translateY(20px);
+}
+
+.interface h1, .enemy h1 {
+  color: var(--white);
+  margin-top: 0.75em;
+}
+
+.interface h3 {
+  font-family: 'Acme', sans-serif;
+  font-size: 1.7em;
+  color: var(--gold);
+  padding: 12px 0 4px;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 0.5em;
+  text-shadow: 1px 1px 2px var(--red);
+}
+
+.interface p {
+  font-family: arial;
+  font-size: 1em;
+  color: var(--white);
+  line-height: 1.5em;
+  letter-spacing: 1px;
+}
+
+.btn-prefight {
+  width: 100vw !important;
+}
+
+.actions {
+  width: 50vw;
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
+  margin-bottom: 4em;
+}
+
+.actions a {
+  padding: 10px 0px;
+  text-align: center;
+  font-size: 1em;
+  font-family: arial;
+  color: var(--white);
+  font-weight: bold;
+  position: relative;
+  top: 2em;
+  border-top: 3px solid var(--blue);
+  border-bottom: 3px solid var(--blue);
+  border-right: 1.5px solid var(--blue);
+}
+
+.actions a:nth-of-type(1) {
+  background-color: var(--red);
+}
+
+.actions2 {
+  width: 50vw;
+  display: flex;
+  flex-wrap: wrap;
+  float: right;
+  margin-bottom: 4em;
+}
+
+.actions2 a {
+  padding: 10px 0px;
+  text-align: center;
+  font-size: 1em;
+  font-family: arial;
+  color: var(--white);
+  font-weight: bold;
+  float: right;
+  position: relative;
+  top: 2em;
+  border-top: 3px solid var(--blue);
+  border-bottom: 3px solid var(--blue);
+  border-left: 1.5px solid var(--blue);
+}
+
+.actions2 a:nth-of-type(1) {
+  background-color: var(--white);
+  color: var(--blue)
+}
+
+.enemy {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.enemy a {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.enemy img {
+  width: 220px;
+  height: 220px;
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  transition: 0.5s;
+  box-shadow: 5px 10px 18px var(--white);
+}
+
+.enemy div {
+  width: 25vw;
+  padding: 0 10px 0 20px;
+  background-color: var(--blue);
+  margin-left: 1em;
+  box-shadow: 5px 10px 18px var(--red);
+  transition: 0.5s;
+  margin-bottom: 1em;
+}
+
+.enemy h3 {
+  font-family: 'Acme', sans-serif;
+  font-size: 1.7em;
+  color: var(--gold);
+  padding: 12px 0 4px;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 0.5em;
+  text-shadow: 1px 1px 2px var(--red);
+}
+
+.enemy p {
+  font-family: arial;
+  font-size: 1em;
+  color: var(--white);
+  line-height: 1.5em;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.footer {
+  background-color: var(--blue);
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  visibility: hidden;
+}
+
+.footer p {
+  font-family: arial;
+  font-size: 18px;
+  color: var(--white);
+  padding-bottom: 4px;
+}
+
+.red {
+  color: var(--red);
+}
+
+
+@media screen and (max-width: 500px) {
+
+  body {
+    background-image: url('img/flag2.png');
+  }
+
+  .header {
+    margin-bottom: 1em;
+  }
+  
+  .header p, .footer p {
+    font-size: 0.8em;
+    padding-bottom: 4px;
+  }
+  
+  .header h2, .footer h2 {
+    font-size: 1.7em;
+  }
+
+  .interface {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 1vh;
+  }
+
+  .interface img, .enemy img {
+    width: 120px;
+    height: 120px;
+    margin-left: 4px;
+  }
+
+  .interface div, .enemy div {
+    width: 50vw;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    padding: 8px;
+  }
+
+  .interface h1, .enemy h1 {
+    font-size: 1em;
+    margin-top: 0.5em;
+  }
+
+  .interface h3, .enemy h3 {
+    font-size: 1em;
+    padding: 12px 0 4px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 0.5em;
+  }
+  
+  .interface p, .enemy p {
+    font-family: arial;
+    font-size: 0.5em;
+    color: var(--white);
+    line-height: 1.2;
+    letter-spacing: 1px;
+    padding: 0;
+  }
+  
+  .actions a, .actions2 a {
+    font-size: 0.7em;
+    top: 2em;
+  }
+}
